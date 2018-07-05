@@ -213,7 +213,7 @@ export interface ValidationErrorFunction {
 }
 
 export interface ValidationResult<T> extends Pick<Promise<T>, 'then' | 'catch'> {
-    error: ValidationError;
+    error: ValidationError | null;
     value: T;
 }
 
